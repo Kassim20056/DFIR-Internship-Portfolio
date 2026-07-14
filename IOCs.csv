@@ -1,0 +1,16 @@
+type,indicator,context,detection
+url,http://weeknews.pro/images/updsto.exe,Source of trojan updsto.exe,Trojan:Win32/Spursint.F!cl
+domain,weeknews.pro,Malware-hosting / delivery domain,Defender telemetry
+url,http://www.oxid.it,Flagged malicious by reputation engines,Hybrid Analysis
+file,C:\Users\maryam.var\Downloads\loder.exe,Downloader / loader,Trojan:Win32/Azden.A!cl
+file,C:\Users\maryam.var\Downloads\updsto.exe,Downloaded trojan,Trojan:Win32/Spursint.F!cl
+file,C:\Users\maryam.var\Downloads\DLLInjector v2.exe,DLL injector,Trojan:Win32/CryptInject!MSR
+file,C:\Program Files\ProKAward\wap.exe,Award Keylogger component,MonitoringTool:Win32/AwardKeylogger
+file,C:\Program Files\ProKAward\rsasws.exe,Award Keylogger component,MonitoringTool:Win32/AwardKeylogger
+dir,C:\ProgramData\KMSAutoS\,AutoKMS hacktool,HackTool:Win32/AutoKMS
+service,KMSEmulator,Persistence (F-003),T1543.003
+service,SKLProService,Keylogger persistence (F-001),T1543.003
+scheduled_task,\KMSAutoNet,Persistence (F-003),T1053.005
+registry,HKLM\Software\Policies\Microsoft\Windows Defender\Real-Time Protection\DisableOnAccessProtection,Defender tampering (F-004),T1562.001
+email_artifact,pattern r@w.c (recovered from memory),Collection indicator,T1114
+detection,AwardKeylogger;Azden.A!cl;Spursint.F!cl;AutoKMS;CryptInject!MSR;Occamy.C;DefenderTamperingRestore,Microsoft Defender classifications,Multiple

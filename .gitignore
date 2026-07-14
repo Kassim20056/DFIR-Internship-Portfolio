@@ -1,0 +1,14 @@
+# Evidence & large binaries (never commit raw evidence)
+*.E01
+*.raw
+*.mem
+*.dd
+*.vmem
+*.dmp
+*.zip
+# OS / tooling noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+__pycache__/
